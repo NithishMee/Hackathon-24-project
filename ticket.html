@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Cards Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+body {
+    background: linear-gradient(to right, #e0c3fc, #8ec5fc), /* Soft lavender to light blue */
+                linear-gradient(to bottom, #fccb90, #d57eeb), /* Soft peach to vibrant lavender */
+                linear-gradient(to left, #a1c4fd, #c2e9fb); /* Light blue to pale blue */
+    background-blend-mode: lighten;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+   }
+
+        :root {
+            --card-gap: 20px;
+            --card-border-radius: 12px;
+            --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --card-hover-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            --card-hover-scale: 1.05;
+            --container-padding: 20px;
+        }
+
+        /* General reset and box-sizing */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .navbar .logo {
+            height: 40px;
+        }
+
+        /* Container for center alignment */
+        .container-custom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--container-padding);
+        }
+
+        /* Container for grid layout */
+        .museum-grid-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Grid layout styling */
+        .museum-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: var(--card-gap);
+        }
+
+        /* General card styling */
+        .museum-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Card hover effect */
+        .museum-card:hover {
+            transform: scale(var(--card-hover-scale));
+            box-shadow: var(--card-hover-shadow);
+        }
+
+        .museum-card-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Card content styling */
+        .museum-card-content {
+            padding: 16px;
+        }
+
+        .museum-card-content h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+            color: #333;
+        }
+
+        .museum-card-content p {
+            font-size: 14px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 1200px) {
+            .museum-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columns */
+            }
+        }
+
+        @media (max-width: 900px) {
+            .museum-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .museum-grid {
+                grid-template-columns: 1fr; /* 1 column */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="logo">
+            <h2><b>NCSM</b><h2>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMuseums" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Museums
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMuseums">
+                        <a class="dropdown-item" href="#">Museum 1</a>
+                        <a class="dropdown-item" href="#">Museum 2</a>
+                        <a class="dropdown-item" href="#">Museum 3</a>
+                        <a class="dropdown-item" href="#">Museum 4</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All Museums</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownExhibitions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Exhibitions
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownExhibitions">
+                        <a class="dropdown-item" href="#">Exhibition 1</a>
+                        <a class="dropdown-item" href="#">Exhibition 2</a>
+                        <a class="dropdown-item" href="#">Exhibition 3</a>
+                        <a class="dropdown-item" href="#">Exhibition 4</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All Exhibitions</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContact" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contact Us
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownContact">
+                        <a class="dropdown-item" href="#">Contact Form</a>
+                        <a class="dropdown-item" href="#">Support</a>
+                        <a class="dropdown-item" href="#">Feedback</a>
+                        <a class="dropdown-item" href="#">FAQs</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Container -->
+    <div class="container-custom">
+        <!-- Museum Grid -->
+        <div class="museum-grid-container">
+            <div class="museum-grid">
+                <!-- Card 4 -->
+                <a href="https://example.com/museum4" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t8.png" alt="Museum 4">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Natural History Museum</h2>
+                        <p>Explore the natural world, from dinosaur fossils to rare gemstones, at the Natural History Museum.</p>
+                    </div>
+                </a>
+                <!-- Card 5 -->
+                <a href="https://example.com/museum5" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t9.png" alt="Museum 5">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Modern Art Museum</h2>
+                        <p>Experience cutting-edge art and contemporary exhibitions at the Modern Art Museum.</p>
+                    </div>
+                </a>
+                <!-- Card 6 -->
+                <a href="https://example.com/museum6" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t10.png" alt="Museum 6">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Ethnographic Museum</h2>
+                        <p>Learn about different cultures and their traditions through exhibits at the Ethnographic Museum.</p>
+                    </div>
+                </a>
+                <!-- Card 7 -->
+                <a href="https://example.com/museum7" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t11.png" alt="Museum 7">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Photography Museum</h2>
+                        <p>Discover the art of photography with historical and contemporary photo exhibitions.</p>
+                    </div>
+                </a>
+                <!-- Card 8 -->
+                <a href="https://example.com/museum8" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t12.png" alt="Museum 8">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Military Museum</h2>
+                        <p>Explore military history with exhibits on weaponry, uniforms, and war history.</p>
+                    </div>
+                </a>
+                <!-- Card 9 -->
+                <a href="https://example.com/museum9" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t13.png" alt="Museum 9">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Railway Museum</h2>
+                        <p>Explore the history of rail travel with vintage trains and railway artifacts.</p>
+                    </div>
+                </a>
+                <!-- Card 10 -->
+                <a href="https://example.com/museum10" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t14.png" alt="Museum 10">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Aquarium Museum</h2>
+                        <p>Discover marine life and aquatic ecosystems at the Aquarium Museum.</p>
+                    </div>
+                </a>
+                <!-- Card 11 -->
+                <a href="https://example.com/museum11" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t15.png" alt="Museum 11">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Art Deco Museum</h2>
+                        <p>Explore the elegance of the Art Deco movement with exhibits on design, architecture, and fashion.</p>
+                    </div>
+                </a>
+                <!-- Card 12 -->
+                <a href="https://example.com/museum12" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t16.png" alt="Museum 12">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Space Museum</h2>
+                        <p>Discover the wonders of space exploration and astronomy at the Space Museum.</p>
+                    </div>
+                </a>
+                <!-- Card 13 -->
+                <a href="https://example.com/museum13" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t17.png" alt="Museum 13">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Children's Museum</h2>
+                        <p>A hands-on museum designed for children to explore, learn, and play.</p>
+                    </div>
+                </a>
+                <!-- Card 14 -->
+                <a href="https://example.com/museum14" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t18.png" alt="Museum 14">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Design Museum</h2>
+                        <p>Explore contemporary design and innovation at the Design Museum.</p>
+                    </div>
+                </a>
+                <!-- Card 15 -->
+                <a href="https://example.com/museum15" class="museum-card">
+                    <div class="museum-card-image">
+                        <img src="t19.png" alt="Museum 15">
+                    </div>
+                    <div class="museum-card-content">
+                        <h2>Textile Museum</h2>
+                        <p>Discover the history and art of textiles, from ancient weaving to modern fabrics.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <!-- Location Section -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Location</h4>
+                        <div class="footer-icons">
+                            <div class="icon"><i class="fa fa-home"></i></div>
+                            <div class="text">
+                                33, Block - GN, Sector - V, Bidhan Nagar<br>
+                                Kolkata 700 091, West Bengal, India
+                            </div>
+                        </div>
+                        <div class="footer-icons">
+                            <div class="icon"><i class="fa fa-phone"></i></div>
+                            <div class="text">
+                                <p>(91) (033) 2357 9347</p>
+                                <p>(91) (033) 2357 0850</p>
+                                <p>(91) (033) 2357 6008</p>
+                            </div>
+                        </div>
+                        <div class="footer-icons">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                            <div class="text">
+                                <a href="mailto:sciencecentre@ncsm.gov.in">sciencecentre@ncsm.gov.in</a>
+                            </div>
+                        </div>
+                        <div class="footer-icons">
+                            <div class="icon"><i class="fa fa-map"></i></div>
+                            <div class="text">
+                                <a target="_blank" href="https://www.google.co.in/maps/preview?q=National+Council+of+Science+Museums">Find us on the map</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- social media -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/ncsmgoi" target="_blank" class="social-icon facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/yourprofile" target="_blank" class="social-icon instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/yourchannel" target="_blank" class="social-icon youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+    
+                <!-- Science Centre Section -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget footer-widget widget_links">
+                        <h4 class="widget-title">Science Centre</h4>
+                        <ul>
+                            <li><a href="https://ncsm.gov.in/activities/inauguration-of-bargarh-science-centre-bargarh-odisha">Inauguration of Udaipur Science Centre, Udaipur</a></li>
+                            <li><a href="https://ncsm.gov.in/activities/inauguration-of-bargarh-science-centre-bargarh-odisha">Inauguration of Bargarh Science Centre, Odisha</a></li>
+                            <li><a href="https://ncsm.gov.in/activities/sub-regional-science-centre-jodhpur">Sub-Regional Science Centre, Jodhpur</a></li>
+                            <li><a href="https://ncsm.gov.in/activities/regional-science-centre-coimbatore">Regional Science Centre, Coimbatore</a></li>
+                            <li><a href="https://ncsm.gov.in/activities/jorhat-science-centre-and-planetarium">Jorhat Science Centre & Planetarium</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Subscribe Section -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Subscribe Newsletter</h4>
+                        <form onsubmit="return subsc()">
+                            <input type="hidden" name="_token" value="pmiJGwlbN0OedFQIW3OnYcBT7qxI5vYMuBnpccer">
+                            <input type="email" name="email" id="emailnews" class="form-control newsletter-form" placeholder="Enter email" required="">
+                            <input type="submit" class="survey-btn" name="smbt" value="SUBSCRIBE">
+                            <p><span class="mssg"></span></p>
+                        </form>
+                    </div>
+                    <br><br>
+                    <div class="widget footer-widget">
+                        <h4 class="widget-title">Visits</h4>
+                        <div class="visit-feed">
+                            <iframe src="https://www.powr.io/plugins/hit-counter/cached_view?load=sync&amp;index=0" title="widget" width="270" height="53" style="border:none;"></iframe>
+                        </div>
+                    </div>
+                    <br><br><br>
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Council of Science Museums</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+    <div class="logo">
+        <h2><b>NCSM</b><h2>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMuseums" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Museums
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMuseums">
+                    <a class="dropdown-item" href="#">Museum 1</a>
+                    <a class="dropdown-item" href="#">Museum 2</a>
+                    <a class="dropdown-item" href="#">Museum 3</a>
+                    <a class="dropdown-item" href="#">Museum 4</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">All Museums</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownExhibitions" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Exhibitions
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownExhibitions">
+                    <a class="dropdown-item" href="#">Exhibition 1</a>
+                    <a class="dropdown-item" href="#">Exhibition 2</a>
+                    <a class="dropdown-item" href="#">Exhibition 3</a>
+                    <a class="dropdown-item" href="#">Exhibition 4</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">All Exhibitions</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownContact" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Contact Us
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownContact">
+                    <a class="dropdown-item" href="#">Contact Form</a>
+                    <a class="dropdown-item" href="#">Support</a>
+                    <a class="dropdown-item" href="#">Feedback</a>
+                    <a class="dropdown-item" href="#">FAQs</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Hero Section with Video Background -->
+    <div class="hero-section text-center text-white">
+        <div class="overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="IAG Cargo _ The National Gallery teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="container hero-content">
+            <h1>Welcome to the National Council of Science Museums</h1>
+            <p>Explore History, Art, and Culture</p>
+            <a href="ticket.html" class="btn btn-primary heartbeat">Book Tickets</a>
+        </div>
+    </div>
+ 
+    <!-- Services Section Carousel -->
+<section class="services-section py-5">
+    <div class="container">
+        <h2 class="text-center">Our Services</h2>
+        <div id="servicesCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="iex.jpg" alt="Service 1" class="img-fluid rounded-circle">
+                            <h3>Interactive Exhibits</h3>
+                            <p>Explore our interactive science<br>exhibits designed for all ages.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="educational programs2.jpeg" alt="Service 2" class="img-fluid rounded-circle">
+                            <h3>Educational Programs</h3>
+                            <p>Engage in our educational programs<br> that inspire curiosity and learning.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="special evnts.jpg" alt="Service 3" class="img-fluid rounded-circle">
+                            <h3>Special Events</h3>
+                            <p>Join us for special events and<br> exhibitions throughout the year.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <img src="science workshops.jpg" alt="Service 4" class="img-fluid rounded-circle">
+                            <h3>Science Workshops</h3>
+                            <p>Participate in our hands-on science workshops for a fun learning experience.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="vts.jpg" alt="Service 5" class="img-fluid rounded-circle">
+                            <h3>Virtual Tours</h3>
+                            <p>Take a virtual tour of our exhibits and learn from home.</p>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <img src="gts.jpg" alt="Service 6" class="img-fluid rounded-circle">
+                            <h3>Guided Tours</h3>
+                            <p>Join our expert guides for an informative tour of our facilities.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+<div class="custom-cards-container">
+    <!-- Custom Card 1 -->
+    <div class="custom-card wow animate__fadeInUp" data-wow-delay="200ms">
+        <img src="5.png" alt="Card Image 1">
+        <div class="custom-card-content">
+            <h3>Science Museum</h3>
+            <p>Explore the wonders of science through interactive exhibits and innovative displays.</p>
+        </div>
+    </div>
+
+    <!-- Custom Card 2 -->
+    <div class="custom-card wow animate__fadeInUp" data-wow-delay="400ms">
+        <img src="6.png" alt="Card Image 2">
+        <div class="custom-card-content">
+            <h3>Technology Center</h3>
+            <p>Discover cutting-edge technology and experience the future today.</p>
+        </div>
+    </div>
+
+    <!-- Custom Card 3 -->
+    <div class="custom-card wow animate__fadeInUp" data-wow-delay="600ms">
+        <img src="7.png" alt="Card Image 3">
+        <div class="custom-card-content">
+            <h3>Innovation Hub</h3>
+            <p>Join us at the hub of creativity and innovation where ideas come to life.</p>
+        </div>
+    </div>
+
+    <!-- Custom Card 4 -->
+    <div class="custom-card wow animate__fadeInUp" data-wow-delay="800ms">
+        <img src="4.png" alt="Card Image 4">
+        <div class="custom-card-content">
+            <h3>Space Exploration</h3>
+            <p>Embark on a journey through space and uncover the mysteries of the universe.</p>
+        </div>
+    </div>
+</div>
+
+    <!-- Exhibitions Section -->
+    <section class="exhibitions-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center">Current Exhibitions</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="1.png" class="card-img-top" alt="Exhibition 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Science of the Future</h5>
+                            <p class="card-text">Explore groundbreaking innovations and the future of science.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <img src="2.png" class="card-img-top" alt="Exhibition 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Cultural Heritage</h5>
+                            <p class="card-text">Discover the rich cultural heritage of India and the world.</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- News Section -->
+    <section class="news-section py-5">
+        <div class="container">
+            <h2 class="text-center">Latest News</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">NCSM Hosts Science Fair</h5>
+                            <p class="card-text">National Council of Science Museums hosts an annual science fair.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">New Exhibition Launched</h5>
+                            <p class="card-text">A new exhibition on ancient Indian science has been launched.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Science Workshops for Students</h5>
+                            <p class="card-text">NCSM organizes science workshops for school students.</p>
+                            <a href="#" class="btn btn-secondary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </section>
+    <!-- Client Testimonials Section -->
+<section class="testimonials-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center">What Our Visitors Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-item">
+                    <blockquote class="blockquote">
+                        <p>"An exceptional experience! The exhibits were both educational and fascinating."</p>
+                        <footer class="blockquote-footer">Emily Johnson</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-item">
+                    <blockquote class="blockquote">
+                        <p>"A must-visit for families. The interactive displays were a hit with my kids."</p>
+                        <footer class="blockquote-footer">Michael Lee</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-item">
+                    <blockquote class="blockquote">
+                        <p>"The workshops were informative and well-organized. We learned a lot!"</p>
+                        <footer class="blockquote-footer">Sarah Brown</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- FAQ Section -->
+<section class="faq-section py-5">
+    <div class="container">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What are the museum hours?
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Our museum is open from Monday to Friday, 10:00 AM - 6:00 PM, and on weekends from 11:00 AM - 7:00 PM.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Are there any special events coming up?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Yes, we have several special events throughout the year. Please check our Events page for the latest updates.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            How can I book a guided tour?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        You can book a guided tour by contacting our visitor services department via phone or email.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--float btn-->
+<div role="button" class="float-btn">
+    <div class="flex h-full">
+        <img class="w-6 h-6 pointer-events-none" src="POE-Logo.png" alt="logo icon">
+        <a href="http://127.0.0.1:5500/Chat%20bot.html" class="btn-primary"></a>
+    </div>   
+            <path d="M7.83725 1.30615L1.30664 7.83676M1.30664 1.30615L7.83725 7.83676" 
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round" 
+                  stroke-linejoin="round"></path>
+</div>
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <!-- Location Section -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget footer-widget">
+                    <h4 class="widget-title">Location</h4>
+                    <div class="footer-icons">
+                        <div class="icon"><i class="fa fa-home"></i></div>
+                        <div class="text">
+                            33, Block - GN, Sector - V, Bidhan Nagar<br>
+                            Kolkata 700 091, West Bengal, India
+                        </div>
+                    </div>
+                    <div class="footer-icons">
+                        <div class="icon"><i class="fa fa-phone"></i></div>
+                        <div class="text">
+                            <p>(91) (033) 2357 9347</p>
+                            <p>(91) (033) 2357 0850</p>
+                            <p>(91) (033) 2357 6008</p>
+                        </div>
+                    </div>
+                    <div class="footer-icons">
+                        <div class="icon"><i class="fa fa-envelope"></i></div>
+                        <div class="text">
+                            <a href="mailto:sciencecentre@ncsm.gov.in">sciencecentre@ncsm.gov.in</a>
+                        </div>
+                    </div>
+                    <div class="footer-icons">
+                        <div class="icon"><i class="fa fa-map"></i></div>
+                        <div class="text">
+                            <a target="_blank" href="https://www.google.co.in/maps/preview?q=National+Council+of+Science+Museums">Find us on the map</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facebook Section -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget footer-widget">
+                    <h4 class="widget-title">Like Us on Facebook</h4>
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fncsmgoi%2F&amp;tabs=timeline&amp;width=340&amp;height=300" width="100%" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true"></iframe>
+                </div>
+            </div>
+
+            <!-- Science Centre Section -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget footer-widget widget_links">
+                    <h4 class="widget-title">Science Centre</h4>
+                    <ul>
+                        <li><a href="https://ncsm.gov.in/activities/inauguration-of-bargarh-science-centre-bargarh-odisha">Inauguration of Udaipur Science Centre, Udaipur</a></li>
+                        <li><a href="https://ncsm.gov.in/activities/inauguration-of-bargarh-science-centre-bargarh-odisha">Inauguration of Bargarh Science Centre, Odisha</a></li>
+                        <li><a href="https://ncsm.gov.in/activities/sub-regional-science-centre-jodhpur">Sub-Regional Science Centre, Jodhpur</a></li>
+                        <li><a href="https://ncsm.gov.in/activities/regional-science-centre-coimbatore">Regional Science Centre, Coimbatore</a></li>
+                        <li><a href="https://ncsm.gov.in/activities/jorhat-science-centre-and-planetarium">Jorhat Science Centre & Planetarium</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Subscribe Section -->
+            <div class="col-md-3 col-sm-6">
+                <div class="widget footer-widget">
+                    <h4 class="widget-title">Subscribe Newsletter</h4>
+                    <form onsubmit="return subsc()">
+                        <input type="hidden" name="_token" value="pmiJGwlbN0OedFQIW3OnYcBT7qxI5vYMuBnpccer">
+                        <input type="email" name="email" id="emailnews" class="form-control newsletter-form" placeholder="Enter email" required="">
+                        <input type="submit" class="survey-btn" name="smbt" value="SUBSCRIBE">
+                        <p><span class="mssg"></span></p>
+                    </form>
+                </div>
+                <br><br>
+                <div class="widget footer-widget">
+                    <h4 class="widget-title">Visits</h4>
+                    <div class="visit-feed">
+                        <iframe src="https://www.powr.io/plugins/hit-counter/cached_view?load=sync&amp;index=0" title="widget" width="270" height="53" style="border:none;"></iframe>
+                    </div>
+                </div>
+                <br><br><br>
+               
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
